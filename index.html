@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Komponent do komunikacji między urządzeniami</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body,
+        html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+        
+        .menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="text-align: justify">
+    <div class="w3-content" style="max-width:700px">
+        <h1 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Komponent do komunikacji między urządzeniami</span></h1>
+
+        <h3>
+            <b>Informacje o projekcie</b>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5><i>
+                    <ul>
+                        <u><h4><B>GUI</b><br></h4></u>
+                            <span id ="GUI"></span><br><br>
+                            
+                        <u><h4><B>Metoda testowa</b><br></h4></u>
+                            <B>Testy funkcjonalne</b><br><span id ="T1"></span><br><br>
+                            <B>Testy niefunkcjonalne</b><br><span id ="T2"></span><br><br>
+                            <B>Testy uzyteczności</b><br><span id ="T3"></span><br>
+                                        
+                            <u><br><h4><B>Cechy funkcjonalne i niefunkcjonalne</b><br></h4></u>
+                                <B>Funkcjonalne:</b><br><span id ="FUNCTIONAL"></span>
+                                    <li><span id = "P1"></span></li>
+                                    <li><span id = "P2"></span></li>
+                                    <li><span id = "P3"></span></li>
+                                    <br>
+
+                                <B>Niefunkcjonalne:</b><br><span id ="NON-FUNCTIONAL"></span>
+                                    <li><span id = "NP1"></span></li>
+                                    <li><span id = "NP2"></span></li>
+                                    <li><span id = "NP3"></span></li>
+                                    <li><span id = "NP4"></span></li>
+                    </ul> 
+                </i></h5>
+            </div>
+        </h3>
+
+        <h3>
+            <h3>
+                <B>Krótki opis aplikacji</b><br></h3>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="DESCRIPTION"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Instrukcja</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="INSTRUCTION"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Testy</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <embed src="Test.pdf" width="660px" height="940px" />
+
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>API</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="API"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Cechy komponentu</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="COMPONENT"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Podsumowanie</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="SUMMARY"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Autorzy</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5><i>
+                    <ul>
+                        <li>Mateusz Skotarczak</li>
+                        <li>Konrad Murawski</li>
+                    </ul> 
+                </i></h5>
+            </div>
+        </h3>
+
+        <h3>
+            <B>Wersja</b><br></h4>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <h5>
+                    </i>
+                    <span id="VERSION"></span><br>
+                </h5>
+                </i>
+            </div>
+        </h3>
+    </div>
+    <script>
+        if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else { // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET", "data.xml", false);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+
+        document.getElementById("GUI").innerHTML = xmlDoc.getElementsByTagName("GUI")[0].childNodes[0].nodeValue;
+
+        document.getElementById("T1").innerHTML = xmlDoc.getElementsByTagName("T1")[0].childNodes[0].nodeValue;
+
+        document.getElementById("T2").innerHTML = xmlDoc.getElementsByTagName("T2")[0].childNodes[0].nodeValue;
+
+        document.getElementById("T3").innerHTML = xmlDoc.getElementsByTagName("T3")[0].childNodes[0].nodeValue;
+
+        document.getElementById("FUNCTIONAL").innerHTML = xmlDoc.getElementsByTagName("FUNCTIONAL")[0].childNodes[0].nodeValue;
+
+        document.getElementById("P1").innerHTML = xmlDoc.getElementsByTagName("P1")[0].childNodes[0].nodeValue;
+
+        document.getElementById("P2").innerHTML = xmlDoc.getElementsByTagName("P2")[0].childNodes[0].nodeValue;
+
+        document.getElementById("P3").innerHTML = xmlDoc.getElementsByTagName("P3")[0].childNodes[0].nodeValue;
+
+        document.getElementById("NON-FUNCTIONAL").innerHTML = xmlDoc.getElementsByTagName("NON-FUNCTIONAL")[0].childNodes[0].nodeValue;
+
+        document.getElementById("NP1").innerHTML = xmlDoc.getElementsByTagName("NP1")[0].childNodes[0].nodeValue;
+
+        document.getElementById("NP2").innerHTML = xmlDoc.getElementsByTagName("NP2")[0].childNodes[0].nodeValue;
+
+        document.getElementById("NP3").innerHTML = xmlDoc.getElementsByTagName("NP3")[0].childNodes[0].nodeValue;
+
+        document.getElementById("NP4").innerHTML = xmlDoc.getElementsByTagName("NP4")[0].childNodes[0].nodeValue;
+
+        document.getElementById("DESCRIPTION").innerHTML = xmlDoc.getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+
+        document.getElementById("INSTRUCTION").innerHTML = xmlDoc.getElementsByTagName("INSTRUCTION")[0].childNodes[0].nodeValue;
+
+        document.getElementById("API").innerHTML = xmlDoc.getElementsByTagName("API")[0].childNodes[0].nodeValue;
+
+        document.getElementById("COMPONENT").innerHTML = xmlDoc.getElementsByTagName("COMPONENT")[0].childNodes[0].nodeValue;
+
+        document.getElementById("SUMMARY").innerHTML = xmlDoc.getElementsByTagName("SUMMARY")[0].childNodes[0].nodeValue;
+
+        document.getElementById("VERSION").innerHTML = xmlDoc.getElementsByTagName("VERSION")[0].childNodes[0].nodeValue;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ABOUT>
+    <GUI>
+    Stosowane pakiety do budowy GUI (np. pakiet swing w Javie), narzucają strukturę powiązań między specjalizowanymi klasami, obsługę zdarzeń generowanych przez elementy GUI, stąd zaleca się projektowanie GUI za pomocą metod wizualnych, pozwalających na wygenerowanie pełnego kodu. Stosowane technologie do budowy GUI (np. oparte na pakiecie javax.swing) dostarczają pakiety do wizualnego projektowania i programowania interfejsu, aby ułatwić pracę programistom. Utworzony interfejs uŜytkownika, jako warstwa klienta, moŜna łatwo połączyć z pozostałymi warstwami tworzonego oprogramowania.
+    </GUI>
+    <TEST_METHOD>
+        <T1>
+            Polegają na weryfikacji systemu bez wnikania w kody źródłowe (wewnętrzną strukturę oprogramowania). Testy oparte na specyfikacji i wymaganiach. Testowanie takich elementów systemu, jak np. weryfikacja poprawności wyświetlanych elementów aplikacji (menu, grafika, tekst), komunikacja pomiędzy aplikacją a serwerem.
+        </T1>
+        <T2>
+            Polegają na testowaniu systemu w oderwaniu od jego zbudowanych funkcjonalności. Testowanie niefunkcjonalne daje nam odpowiedź na pytanie „Jak działa system?” Celem jest uzyskanie informacji o konkretnych właściwościach systemu lub określonego modułu. Testowanie niefunkcjonalne może być wykonywane na wszystkich poziomach testów.
+        </T2>
+        <T3>
+            Koncentrują się na sprawdzeniu, czy wytworzony produkt spełnia założone cele i wymagania. Dają one bezpośrednią informację na temat tego, w jaki sposób użytkownicy eksploatują system. Przykładami oprogramowania, które najczęściej wykorzystują testy użyteczności są właśnie: strony i aplikacje internetowe.
+        </T3>
+    </TEST_METHOD>
+    <REQUIREMENTS>
+        <FUNCTIONAL>
+            <P1>Przesyłanie informacji tekstowej pomiędzy dwoma urządzeniami w sieci lokalnej.</P1>
+            <P2>Wyświetlanie odebranych i wysłanych danych.</P2>
+            <P3>Dodawanie daty do wysyłanej wiadomości.</P3>
+        </FUNCTIONAL>
+        <NON-FUNCTIONAL>
+            <NP1>Limit przesłanych znaków do 100 pozycji.</NP1>
+            <NP2>Minimalna ilość znaków.</NP2>
+            <NP3>Zawijanie tekstu.</NP3>        
+            <NP4>Odstępy pomiędzy linijkami.</NP4>        
+        </NON-FUNCTIONAL>
+    </REQUIREMENTS>
+    <DESCRIPTION>
+        Aplikacja do przesyłania krótkich wiadomości tekstowych pomiędzy urządzeniami w sieci lokalnej.
+    </DESCRIPTION>
+    <INSTRUCTION>
+        W trakcie tworzenia.
+    </INSTRUCTION>
+    <API>
+        Od strony technicznej API to kod, który kontroluje wszystkie punkty dostępowe aplikacji lub serwera. Do serwerów tych można wysłać zewnętrzne żądanie, które to API obsługuje jako tłumacz. To właśnie Interfejs Programowania Aplikacji prześle zapytania do aplikacji oraz pozwoli odesłać jej informację zwrotną.
+    </API>
+    <COMPONENT>
+        Niezależnie wytworzony, skompilowany (z ukrytymi szczegółami implementacyjnymi) moduł programowy, udostępniający swą funkcjonalność za pomocą jednoznacznie zdefiniowanego interfejsu, zdolny do współdziałania z większą całością (systemem) oraz innymi komponentami.
+    </COMPONENT>
+    <SUMMARY>
+        Cel pracy został osiągnięty zgodnie z założeniami.
+    </SUMMARY>
+    <VERSION>
+        1.0a
+    </VERSION>
+</ABOUT>
+
